@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
+const dbConf = require('./config/db');
 const app = express();
 
 // estratégia para utilização do protocolo http e socket
@@ -14,12 +15,7 @@ const io = require('socket.io')(server);
 server.listen(3333);
 
 // estabelece a conexão com o banco de dados MongoDB hospedado no MongoDB Atlas Cloud
-mongoose.connect(
-	'mongodb+srv://omniapp:app123321@cluster0-aqagd.gcp.mongodb.net/test?retryWrites=true&w=majority',
-	{
-		useNewUrlParser: true
-	}
-);
+mongoose.connect(dbConf.mongo.getString(), dbConf.mongo.options);
 
 // cria um middleware para disponibilizar o io no request da aplicação
 // o next permite que, ao interceptar esta requisição, prossiga para os demais, caso contrário, ia dá um stop aqui mesmo

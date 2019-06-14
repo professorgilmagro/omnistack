@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const paginate = require('mongoose-paginate');
 
 // abstração da tabela no banco de dados
 const PostSchema = new mongoose.Schema(
@@ -18,4 +19,5 @@ const PostSchema = new mongoose.Schema(
 	}
 );
 
+PostSchema.plugin(paginate);
 module.exports = mongoose.model('Post', PostSchema);

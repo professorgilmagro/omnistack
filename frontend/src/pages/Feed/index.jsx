@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
-import AppConfig from '../../config/app';
+import ServerConfig from '../../config/server';
 import io from 'socket.io-client';
 import './styles.css';
 
@@ -27,7 +27,7 @@ class Feed extends Component {
 	 * 2 - Toda vez que uma curtida é realizada em um dos posts existentes
 	 */
 	registerToSocket = () => {
-		const socket = io(AppConfig.server.getURL());
+		const socket = io(ServerConfig.getURL());
 
 		// 1. Adiciona o novo post como primeiro item no feed.
 		socket.on('post', newPost => {
@@ -63,9 +63,7 @@ class Feed extends Component {
 							<img src={more} alt='mais' />
 						</header>
 						<img
-							src={`${AppConfig.server.getURL('files')}/${
-								post.image
-							}`}
+							src={ServerConfig.getURL('files', post.image)}
 							alt={post.place}
 						/>
 						<footer>

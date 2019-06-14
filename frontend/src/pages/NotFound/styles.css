@@ -1,6 +1,6 @@
 .not-found {
 	display: flex;
-	height: 100vh;
+	height: calc(100vh - 72px);
 	align-items: center;
 	justify-content: center;
 }
