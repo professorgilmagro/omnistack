@@ -12,11 +12,11 @@ jobs:
 
             - run:
                   name: backend
-                  command: yarn --cwd backend install && yarn --cwd backend start
+                  command: yarn --cwd backend install
 
             - run:
                   name: frontend
-                  command: yarn --cwd frontend install && yarn --cwd frontend start
+                  command: yarn --cwd frontend install
 
             - save_cache:
                   paths:
