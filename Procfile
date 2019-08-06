@@ -1,2 +1,2 @@
-server: yarn start --prefix server
-web: yarn start --prefix frontend
+server: sh -c './backend/ && yarn start'
+server: sh -c './frontend/ && yarn start'
