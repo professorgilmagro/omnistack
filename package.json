@@ -6,6 +6,7 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "yarn --cwd frontend start",
+		"build": "yarn --cwd backend install && yarn --cwd frontend install",
 		"heroku-postbuild": "yarn --cwd backend start"
 	},
 	"engines": {
