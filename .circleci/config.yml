@@ -17,8 +17,3 @@ jobs:
             - run:
                   name: frontend
                   command: yarn --cwd frontend install
-
-            - save_cache:
-                  paths:
-                      - node_modules
-                  key: v1-dependencies-{{ checksum "package.json" }}
