@@ -1,0 +1,14 @@
+{
+	"name": "omnistack",
+	"version": "1.0.0",
+	"private": true,
+	"main": "./backend/index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "yarn --cwd backend start",
+		"heroku-postbuild": "yarn --cwd frontend start"
+	},
+	"engines": {
+		"node": ">=10.0.0"
+	}
+}
