@@ -1,2 +1,2 @@
-server: yarn --cwd backend start
-web: yarn --cwd frontend start
+server: cd backend && yarn start
+web: cd frontend && yarn start
