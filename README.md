@@ -44,4 +44,4 @@ $ yarn start
 ```
 
 3. Acesso do endpoint de posts pode ser obtido em:
-   http://localhost:3000/posts
+   http://localhost:3000
