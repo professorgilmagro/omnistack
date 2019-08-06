@@ -5,8 +5,8 @@
 	"main": "./backend/index.js",
 	"license": "MIT",
 	"scripts": {
-		"start": "yarn --cwd backend start",
-		"heroku-postbuild": "yarn --cwd frontend start"
+		"start": "yarn --cwd frontend start",
+		"heroku-postbuild": "yarn --cwd backend start"
 	},
 	"engines": {
 		"node": ">=10.15.0",
