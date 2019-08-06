@@ -9,6 +9,7 @@
 		"heroku-postbuild": "yarn --cwd frontend start"
 	},
 	"engines": {
-		"node": ">=10.0.0"
+		"node": ">=10.15.0",
+		"yarn": ">=1.16"
 	}
 }
